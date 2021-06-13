@@ -1,12 +1,47 @@
 body{
     font-family: 'Baloo Tamma 2', cursive;
     text-align: center;
-    padding: 5% 20% ;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #F5F7FB;
 }
+.index {
+    margin-top: 50px;
+    padding: 5% 20% ;
 
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+#logo{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-color: white;
+    /* position: absolute; */
+    border-radius: 20px;
+}
+.card{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-color: white;
+    border-radius: 20px;
+    width: 175px;
+    height: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.card:hover{
+    background-color: #667EEC;
+    color: #fff;
+}
+.logo-img {
+    margin-top: -60px;
+}
 .insta-capela{
     margin-top: 0px;
 }
@@ -18,54 +53,118 @@ hr{
 #text{
     font-style: normal;
     font-weight: normal;
-    font-size: 23px;
-    line-height: 28px;
-    color: #3D3D4D;
+    font-size: 18px;
+    line-height: 21px;
+    color: #A2A9B7;
     margin: 1.5rem;
 }
-#button{
-    min-width: 500px;
+.p-link{
+    display: flex;
+    flex-direction: column;
 }
 
-.button{
-    background: #667EEC;
-    box-shadow: 0px 5.96829px 5.96829px rgba(0, 0, 0, 0.25);
-    border-radius: 200px;
-    margin: 1rem;
-}
-.button:hover{
-    background-color: #fff;
-    border-color: #667EEC;
-    border:
-}
 a{
 	justify-content: center;
     display: flex;
     flex-direction: row;
+}
+.p-link:hover{
     color: #fff;
 }
-a:hover{
-    color: #667EEC;
-}
 i {
-    margin: 0.8rem 1rem 1.2rem 1rem;
+    font-size:50px;
+    margin: 0.8rem 1rem 0 1rem;
+}
+p {
+    font-size: large;
+    line-height: 100%;
 }
 .p-link{
     text-decoration: none;
     align-items: center;
+    color: #667EEC;
 }
 .p-link:visited{
     text-decoration: none;
 }
+button{
+    background: #667EEC;
+    /* box-shadow: 0px 5.96829px 5.96829px rgba(0, 0, 0, 0.25); */
+    border-radius: 20px;
+    border: none;
+    margin: 1rem;
+    color: white;
+}
+button i {
+    font-size: 20px;
+    margin: 0.5rem 2rem;
+    
+}
+.button:hover{
+    background-color: #fff;
+    border-color: #667EEC;
+}
+/* team */
+.grid-member{
+    margin-top: 5rem;
+    width: 20rem;
+    /* width: 50%; */
+}
+.photo-member {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-color: white;
+    border-radius: 20px;
+    padding: 1rem;
+
+}
+.social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.social i {
+    font-size: 30px;
+}
+
+li {
+    list-style: none;
+}
+.card-team{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+.card-team:hover{
+    background-color: #D5D9E3;
+}
+.team-photo {
+    align-items: flex-start;
+    
+}
+.team-name{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 2rem;
+}
+.team-name h2 {
+    margin-bottom: 0;
+}
+.team-name p {
+    margin-top: 0;
+}
 @media (max-width: 550px){
-    body{
+    /* body{
         padding:10% 5% ;
     }
     hr{
         min-width: 50%;
     }
     #text{
-        font-size: 18.2414px;
+        font-size: 15px;
         line-height: 21px;
         margin: 0.5rem;
     }
@@ -79,5 +178,5 @@ i {
     .p-link{
         font-size: 12.6352px;
         line-height: 15px
-    }
+    } */
 }
