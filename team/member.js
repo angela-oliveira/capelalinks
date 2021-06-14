@@ -43,11 +43,11 @@ function lista(person){
     team.innerHTML = ''
     const view = person.map((e) => mountCard(e)).join('')
     team.innerHTML = `
-        <h1>
-        <button onclick="window.location.href='index.html'">
-            <i class="fas fa-arrow-left"></i>
-        </button>Equipe Capela!</h1>
-        <ul>
+        <div class="title-team">
+            <a class="btn" href="index.html"><i class="fas fa-arrow-left"></i></a>
+            <h1>Equipe Capela!</h1>
+        </div>
+        <ul class="list-member">
             ${view}
         </ul>`
 
@@ -72,14 +72,13 @@ function member(name) {
     
     const data = teamList.filter(e => e.id == name)
     team.innerHTML = `
-    <button onclick="lista(teamList)">
-        <i class="fas fa-arrow-left"></i>
-    </button>
-    
+    <div class="title-team">
+        <a class="btn" onclick="lista(teamList)"><i class="fas fa-arrow-left"></i></a>
+    </div>
     <div class="grid-member">
         <div class="photo-member">
                 <img class="logo-img" src="asserts/${data[0].id}.png" alt="">
-                <p class="insta-capela"${data[0].name}</p>
+                <h3>${data[0].name}</h3>
                 <div id="text">${data[0].function}</div>
                 <div class="social">
                     <a target="_blank" class="p-link" href="${data[0].instagram}">
